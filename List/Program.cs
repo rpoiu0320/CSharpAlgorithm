@@ -123,11 +123,11 @@
             list.Add("4번 데이터");
             list.Add("5번 데이터");
 
-            list.Remove("2번 데이터");  // 삭제
-            list.RemoveAt(0);
+            //list.Remove("2번 데이터");  // 삭제
+            list.RemoveAt(2);
 
-            list[0] = "첫번째 데이터";    // 접근
-            string str = list[0];
+            // list[0] = "첫번째 데이터";    // 접근
+            // string str = list[0];
 
             for(int i  = 0; i < list.Count; i++)
             {
