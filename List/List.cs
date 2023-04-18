@@ -33,6 +33,13 @@ namespace DataStructuer
 
                 return items[index];
             }
+            set
+            {
+                if (index < 0 || index >= size)
+                    throw new IndexOutOfRangeException();
+
+                items[index] = value;
+            }
         }
         public void Add(T item)
         {
