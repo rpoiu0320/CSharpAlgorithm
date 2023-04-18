@@ -48,6 +48,9 @@
 		 * 
 		 * 런타임 중 크기를 확장할 수 있는 배열기반의 자료구조
 		 * 배열요소의 갯수를 특정할 수 없는 경우 사용, 크기를 정하지 않고 생성
+		 * 
+		 * 처음 생성할 때 크게 만들어 두고 요소를 추가할 때 마다 수정, 동적할당 더 찾아보기
+		 * List는 length가 없음, count를 사용해야함
 		 ******************************************************/
 
         // <List의 사용> (System.Collections.Generic 이게 있어야 사용 가능)
@@ -84,6 +87,8 @@
         static void Main(string[] args)
         {
             List<string> list = new List<string>();
+
+            // list.Capacity    여유공간 확인
 
             list.Add("1번 데이터");
             list.Add("2번 데이터");
