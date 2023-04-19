@@ -51,6 +51,11 @@
 		 * 
 		 * 처음 생성할 때 크게 만들어 두고 요소를 추가할 때 마다 수정, 동적할당 더 찾아보기
 		 * List는 length가 없음, count를 사용해야함
+		 * 
+		 * 
+		 *  <List의 시간복잡도>                (선형탐색)
+         * 접근		탐색		삽입		삭제
+         * O(1)		O(n)	O(n)	O(n)
 		 ******************************************************/
 
         // <List의 사용> (System.Collections.Generic 이게 있어야 사용 가능)
@@ -78,11 +83,6 @@
             string? findValue = list.Find(x => x.Contains('2'));
             int findIndex = list.FindIndex(x => x.Contains('0'));
         }
-
-        // <List의 시간복잡도>                (선형탐색)
-        // 접근		탐색		삽입		삭제
-        // O(1)		O(n)	O(n)	O(n)
-
 
         static void Main(string[] args)
         {

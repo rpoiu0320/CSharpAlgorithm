@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Algorithm\Algorithm.csproj", "{572F7B49-27B0-423C-9F9C-7BCAC24A5C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithm", "Algorithm\Algorithm.csproj", "{572F7B49-27B0-423C-9F9C-7BCAC24A5C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "List\List.csproj", "{DA9A87F3-FF93-4C86-98EF-324DCBAADC99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List", "List\List.csproj", "{DA9A87F3-FF93-4C86-98EF-324DCBAADC99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{13E691F7-D94B-41DB-9169-0115F2C8500B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DA9A87F3-FF93-4C86-98EF-324DCBAADC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9A87F3-FF93-4C86-98EF-324DCBAADC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9A87F3-FF93-4C86-98EF-324DCBAADC99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E691F7-D94B-41DB-9169-0115F2C8500B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E691F7-D94B-41DB-9169-0115F2C8500B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E691F7-D94B-41DB-9169-0115F2C8500B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E691F7-D94B-41DB-9169-0115F2C8500B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
