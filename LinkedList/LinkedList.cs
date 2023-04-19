@@ -60,7 +60,7 @@ namespace DataStructure
         public LinkedListNode<T> Last { get {  return tail; } }
         public int Count { get { return count; } }
 
-        internal LinkedListNode<T> AddFirst(T value)
+        public LinkedListNode<T> AddFirst(T value)
         {
             // 1. 새로운 노드 생성
             LinkedListNode<T> newNode = new LinkedListNode<T> (this, value); // this 키워드가 클래스의 현재 인스턴스의 obj를 참조
@@ -80,6 +80,85 @@ namespace DataStructure
             // 3. 갯수 늘리기
             count++;
             return newNode;
+        }
+
+        public LinkedListNode<T> AddBefore(LinkedListNode<T> node, T value)
+        {
+            if (node.list != this)     // 예외1 : 노드가 연결리스트에 포함된 노드가 아닌 경우
+                throw new InvalidOperationException();
+            if (node.list == null)     // 예외2 : 노드가 null인 경우
+                throw new ArgumentNullException(nameof(node));
+
+            // 1. 새로운 노드 만들기
+            LinkedListNode<T> newNode = new LinkedListNode<T>(this, value);
+
+            // 2. 연결구조 바꾸기
+            newNode.next = node;
+            newNode.prev = node.prev;
+            node.prev = newNode;
+
+            if (node.prev != null)
+                node.prev.next = newNode;
+            else
+                head = newNode;
+
+            // 3. 갯수 증가
+            count++;
+
+            return newNode;
+        }
+
+        public void Remove(LinkedListNode<T> node)
+        {       
+            if ( node.list != this)     // 예외1 : 노드가 연결리스트에 포함된 노드가 아닌 경우
+                throw new InvalidOperationException();
+            if ( node.list == null)     // 예외2 : 노드가 null인 경우
+                throw new ArgumentNullException(nameof(node));
+
+            // 0. 지웠을 때 head나 tail이 변경되는 경우 적용
+            if (head == node)
+                head = node.next;
+            if(tail == node)
+                tail = node.prev;
+
+            // 1. 연결구조 바꾸기
+            if (node.prev != null)
+                node.prev.next = node.next;
+
+            if (node.next != null)
+                node.next.prev = node.prev;
+
+            count--;                    // 갯수 줄이기
+        }
+
+        public bool Remove(T value)
+        {
+            LinkedListNode<T> findNode = Find(value);     // = 찾기
+            if (findNode != null)
+            {
+                Remove(findNode);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public LinkedListNode<T> Find(T value)
+        {
+            LinkedListNode<T> target = head;
+            EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+
+            while (target != null)
+            {
+                if (comparer.Equals(value, target.Value))
+                    return target;
+                else
+                    target = target.next;
+            }
+
+            return null;
         }
     }
 }
