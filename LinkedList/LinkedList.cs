@@ -11,7 +11,7 @@ namespace DataStructure
         internal LinkedList<T> list;
         internal LinkedListNode<T> prev;     // 이전 위치
         internal LinkedListNode<T> next;     // 다음 위치
-        private T item;                     // 데이터
+        private T item;                      // 데이터
 
         public LinkedList<T> List { get { return list; } }
         public LinkedListNode<T> Prev { get { return prev; } }
