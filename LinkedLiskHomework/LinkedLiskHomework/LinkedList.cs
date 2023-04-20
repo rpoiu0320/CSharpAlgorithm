@@ -218,5 +218,20 @@ namespace LinkedLiskHomework
 
             return false;                           // 없으면 false 반환
         }
+
+        public LinkedListNode<T>? FindLast(T value)
+        {
+            LinkedListNode<T> target = tail;        // 마지막 노드부터 시작해서 
+
+            while (target != null)                  // 반복문으로 모든 노드 탐색
+            {
+                if (target.Value.Equals(value))     // 같다면 반환
+                    return target;
+                else                                // 아니면 이전 노드로 이동
+                    target = target.prev;
+            }
+
+            return null;
+        }
     }
 }
