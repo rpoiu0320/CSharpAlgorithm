@@ -203,5 +203,20 @@ namespace LinkedLiskHomework
 
             return null;
         }
+
+        public bool Contains(T value)               // 값이 LinkedList<T>에 있는지 여부를 확인
+        {
+            LinkedListNode<T> target = head;        // 첫번째 노드부터 시작해서 
+
+            while (target != null)                  // 반복문으로 모든 노드 탐색
+            {
+                if (target.Value.Equals(value))     // 같다면 true 반환
+                    return true;
+                else                                // 아니면 다음 노드로 이동
+                    target = target.next;
+            }
+
+            return false;                           // 없으면 false 반환
+        }
     }
 }
