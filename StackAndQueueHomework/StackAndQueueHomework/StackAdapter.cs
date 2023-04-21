@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackAndQueueHomework
 {
+    // 선입후출
     internal class StackAdapter<T>
     {
         private List<T> container;          // 리스트를 기반으로 해서(어뎁터) 스택 구현
