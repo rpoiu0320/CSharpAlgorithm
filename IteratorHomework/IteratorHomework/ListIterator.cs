@@ -29,7 +29,7 @@ namespace IteratorHomework
             {
                 if (index < 0 || index >= size)     // 지정된 범위 벗어나면 오류 표시
                     throw new IndexOutOfRangeException();
-
+                
                 return items[index];
             }
             set
@@ -161,7 +161,7 @@ namespace IteratorHomework
                 {
                     if(index < 0 || index >= list.Count)  // 예외처리
                         throw new IndexOutOfRangeException();
-                    return Current;
+                    return current;
                 }
             }
 
@@ -179,7 +179,7 @@ namespace IteratorHomework
                 }
             }
 
-            public void Reset()                 // 검색기 초기화
+            public void Reset()                 // 반복기 초기화
             {
                 index = 0;                      // 찾을 인덱스와 값을 초기화
                 current = default(T);

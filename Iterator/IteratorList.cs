@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Iterator
-{
+{       // 리스트용 반복기 구현
         internal class List<T> : IEnumerable<T>
         {
             private const int DefaultCapacity = 4;
@@ -139,12 +139,12 @@ namespace Iterator
                 private int index;      // 리스트의 반복기가 가리킬 인덱스
                 private T current;      // 인덱스의 값
 
-                public T Current { get { return current; } }
+                public T Current { get { return current; } }    
 
                 internal Enumerator(List<T> list)
                 {
                     this.list = list;
-                    this.index = 0;
+                    this.index = 0;            
                     this.current = default(T);
                 }
 
@@ -162,7 +162,7 @@ namespace Iterator
 
                 public bool MoveNext()
                 {
-                    if (index < list.Count - 1)
+                    if (index < list.Count)
                     {
                         current = list[++index];
                         return true;

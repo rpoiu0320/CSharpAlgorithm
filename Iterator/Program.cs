@@ -48,6 +48,7 @@
             // 반복기를 이용한 순회
             // foreach 반복문은 데이터집합의 반복기를 통해서 단계별로 반복
             // 즉, 반복기가 있다면 foreach 반복문으로 순회 가능
+            // 반복할 때 배열을 건드리면 안됌, 배열을 추가, 삭제하면 새로운 배열이 생성되기에 반복기가 가리키는 배열과 달라지게됨
             foreach (int i in list) { }
             foreach (int i in linkedList) { }
             foreach (int i in stack) { }
@@ -64,28 +65,31 @@
                 strings.Add(string.Format("{0}데이터", i));
 
             IEnumerator<string> iter = strings.GetEnumerator();
-            iter.MoveNext();    // 다음으로
+            // 반복기                           반복자를 가져와라
+            iter.MoveNext();    // 다음으로, 반환형 bool
             Console.WriteLine(iter.Current);    // output : 0데이터
             iter.MoveNext();
             Console.WriteLine(iter.Current);    // output : 1데이터
 
             iter.Reset();       // 처음으로
-            while (iter.MoveNext())
+            while (iter.MoveNext())             // foreach 늘려놓은거, // foreach로 돌릴 때 MoveNext를 먼저 하고 시작하기에 0으로 하면 맨 처음 배열을 씹고 넘어가버림
             {
                 Console.WriteLine(iter.Current); // 1, 2, 3, 4, 5
             }
         }
 
-        public void Find(IEnumerable<int> container)
+        public void FindInt(IEnumerable<int> container, int value)
         {
             IEnumerator<int> iter = container.GetEnumerator();
 
             iter.Reset();
             while (iter.MoveNext())
             {
-                if (iter.Current == 10)
-                    Console.WriteLine("10 발견");
+                if (iter.Current == value)
+                    Console.WriteLine("찾음");
             }
+            iter.Dispose();
+            Console.WriteLine("못찾음");
         }
 
         IEnumerable<int> IterFunc()
@@ -98,19 +102,32 @@
         static void Main(string[] args)
         {
             Iterator.List<int> list = new Iterator.List<int>();
+            Iterator.LinkedList<int> linkedList = new Iterator.LinkedList<int>();
 
-            for (int i = 0; i <= 5; i++)
+            for (int i = 1; i <= 5; i++)
+            {
+                list.Add(i);
+                linkedList.AddLast(i);
+            }
+
+            /*foreach (int i in list)
             {
                 Console.WriteLine(i);
+            }*/
 
-            }
-                     
-            foreach (int i in list)
+            Console.WriteLine();
+
+            LinkedListNode<int> node = linkedList.First;
+            while (node != null)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(node.Value);
+
+                node = node.Next;
             }
-            /*
-            Iterator.Reset();
+
+            foreach (int i in linkedList) { Console.WriteLine(i); }
+
+            /*Iterator.Reset();
             while (Iterator.MoveNext())
             {
                 Console.WriteLine(Iterator.Current);
