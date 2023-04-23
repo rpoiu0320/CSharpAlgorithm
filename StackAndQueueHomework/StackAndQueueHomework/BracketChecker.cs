@@ -110,5 +110,13 @@ namespace StackAndQueueHomework
             }
             return true;                                    // 모두 멀쩡하면 true 
         }                                                   // 실행 시 스택오버플로우라 조건이 제대로 설정 되었는지 아리송합니다.
+
+        public void OutPut()
+        {
+            if (SequenceCheck())
+                Console.WriteLine("정상적인 수식입니다.");
+            else
+                Console.WriteLine("비정상적인 수식입니다.");
+        }
     }
 }

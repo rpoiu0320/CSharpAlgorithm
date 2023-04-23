@@ -13,10 +13,10 @@
          */
         static void Main(string[] args)
         {
-            BracketChecker bracketChecker = new BracketChecker();       // 스택
+            BracketChecker bracketChecker = new BracketChecker();       // 스택오버플로우가 발생합니다.
 
             bracketChecker.InPut();                 
-            bracketChecker.SequenceCheck();
+            bracketChecker.OutPut();
         }
     }
 }
