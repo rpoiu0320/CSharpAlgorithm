@@ -54,7 +54,7 @@
 			return result;
 		}
 
-		public T Peek()							// 데이터 출력
+		public T Peek()							// 데이터 반환
 		{
             if (IsEmpty())
                 throw new InvalidOperationException();

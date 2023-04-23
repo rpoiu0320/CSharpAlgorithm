@@ -116,5 +116,7 @@ namespace StackAndQueueHomework
                 array = newArray;
             }
         }
+
+
     }
 }

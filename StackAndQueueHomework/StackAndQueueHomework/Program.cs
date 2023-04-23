@@ -13,7 +13,10 @@
          */
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            BracketChecker bracketChecker = new BracketChecker();       // 스택
+
+            bracketChecker.InPut();                 
+            bracketChecker.SequenceCheck();
         }
     }
 }
