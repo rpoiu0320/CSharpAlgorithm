@@ -13,7 +13,7 @@
          */
         static void Main(string[] args)
         {
-            BracketChecker bracketChecker = new BracketChecker();       // 스택오버플로우가 발생합니다.
+            BracketChecker bracketChecker = new BracketChecker();     // 오류처리 해야함
             bracketChecker.InPut();                 
             bracketChecker.OutPut();
         }

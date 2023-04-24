@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterator.csproj", "{20798FBA-5E44-4398-B938-52154075EC33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{421662FA-9956-47D2-9D6A-0835F4F281A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "Stack\Stack.csproj", "{421662FA-9956-47D2-9D6A-0835F4F281A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{187C47D9-63E7-4223-8FE3-B2D1DC029EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj", "{187C47D9-63E7-4223-8FE3-B2D1DC029EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heap", "Heap\Heap.csproj", "{065BAF85-7B7B-4F57-939F-F2D402902913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{187C47D9-63E7-4223-8FE3-B2D1DC029EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{187C47D9-63E7-4223-8FE3-B2D1DC029EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{187C47D9-63E7-4223-8FE3-B2D1DC029EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{065BAF85-7B7B-4F57-939F-F2D402902913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065BAF85-7B7B-4F57-939F-F2D402902913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065BAF85-7B7B-4F57-939F-F2D402902913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065BAF85-7B7B-4F57-939F-F2D402902913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
