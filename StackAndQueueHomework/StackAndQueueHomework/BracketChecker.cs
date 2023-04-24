@@ -17,8 +17,7 @@ namespace StackAndQueueHomework
                                                             // 굳이 원본 스택을 따로 안 살려도 되지만 추가로 동일한 스택을 사용하게 될 수도 있을 것 같아서 따로 지정해 줬습니다.
         public BracketChecker()                             // 생성자 사용
         {
-            containerBracket = new BracketChecker();
-            spareInPut = new BracketChecker();
+            
         }
 
         int squareBracketPront = 0;                         // 각각의 괄호들의 갯수를 저장할 변수들입니다.
@@ -107,8 +106,8 @@ namespace StackAndQueueHomework
                 if(squareBracketPront > squareBracketBack && bracePront > braceBack && parenthesisPront > parenthesistBack)     // 열린 괄호가 닫힌 괄호보다 뒤에 있으면 false
                     return false;                           // false인 예) ") ( ) (", "[ ] ( )"
                 spareCount--;                               
-            }
-            return true;                                    // 모두 멀쩡하면 true 
+            } 
+            return true;                                   // 모두 멀쩡하면 true 
         }                                                   // 실행 시 스택오버플로우라 조건이 제대로 설정 되었는지 아리송합니다.
 
         public void OutPut()
