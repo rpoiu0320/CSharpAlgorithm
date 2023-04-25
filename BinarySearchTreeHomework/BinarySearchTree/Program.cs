@@ -199,7 +199,7 @@
                 }
                 // 자식노드가 둘 있는 경우
                 // 힙 상태가 깨지지 않기 위해
-                // 좌측 노드 중 가장 큰 값과 데이터를 교환한 후, 그 노드를 지워주는 방식으로 대체
+                // 지울 노드의 좌측 노드 중 가장 큰 값과 데이터를 교환한 후, 그 노드를 지워주는 방식으로 대체
                 else // else if (node.HasBothChild) 
                 {
                     Node replaceNode = node.left;               // 지울 노드의 좌측 자식 노드로 이동 후
@@ -210,7 +210,7 @@
                     node.item = replaceNode.item;               // 지울 노드의 가장 큰 자식 노드를 지울 노드의 위치에 덮어써줌, 이중탐색트리 상 지울 노드가 제거됨
                     ErageNode(replaceNode);                     // 덮어쓰는데 사용한, 지울 노드의 가장 큰 자식 노드의 원래 위치에 있는 노드를 제거
 
-                    /*
+                    /*  // 지울 노드의 우측 노드 중 가장 작은 값과 데이터를 교환하는 방식일 때
                     Node replaceNode = node.right;
                     while (replaceNode.left != null)
                     {
