@@ -4,7 +4,7 @@
     {
         internal class BinarySearchTree<T> where T : IComparable<T>     // 비교가 가능한 자료형만
         {
-            private Node root;                                  // 가장 높은 노드
+            private Node root;                                  // 가장 높은 노드(깊이가 가장 낮은 노드)
 
             public BinarySearchTree()
             {
@@ -59,7 +59,7 @@
                         return;     // 아무것도 안함
                 }
             }
-            public bool TryGetValueUseFindNode(T item, out T outValue)  // FindNode함수를 이용한 탐색
+            public bool TryGetValueUseFindNode(T item, out T outValue)  // FindNode 함수를 이용한 탐색
             {
                 if (root == null)                               // 배열에 개체가 아무것도 없을 때
                 {
@@ -125,10 +125,10 @@
 
                 while (current != null)
                 {
-                    // 현재 노드의 값이 찾고자 하는 값보다 작은 경우
+                    // 현재값이 노드의 값보다 더 작은 경우
                     if (item.CompareTo(current.item) < 0)
                         current = current.left;                 // 좌측 자식부터 다시 찾기 시작
-                                                                // 현재 노드의 값이 찾고자 하는 값보다 큰 경우
+                    // 현재값이 노드의 값보다 더 큰 경우
                     else if (item.CompareTo(current.item) > 0)
                         current = current.right;                // 우측 자식부터 다시 찾기 시작
                                                                 // 찾았을 때
