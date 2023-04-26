@@ -1,4 +1,6 @@
-﻿namespace BinarySearchTree_
+﻿using System.Collections.Generic;
+
+namespace BinarySearchTree_
 {
     internal class Program
     {   /******************************************************
@@ -34,6 +36,8 @@
         // 이 경우 탐색영역이 절반으로 줄여지지 않기 때문에 시간복잡도 증가!
         // 이러한 현상을 막기 위해 자가균형기능을 추가한 트리의 사용이 일반적!
         // 대표적인 방식으로 Red-Black Tree, AVL Tree 등이 있음
+
+        // SortedSet에서 Red-Black트리가 사용됌
 
         // 이진탐색트리의 한계점과 극복법 기술면접
 
