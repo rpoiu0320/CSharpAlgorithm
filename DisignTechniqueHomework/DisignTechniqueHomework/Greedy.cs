@@ -80,5 +80,5 @@ namespace DisignTechniqueHomework
             // Console.WriteLine(int.Parse(inPut));        // 이것저것 해봤는데 FormatException 에 계속 막힙니다.
             Console.WriteLine(inPut);
         }
-}
+    }
 }
