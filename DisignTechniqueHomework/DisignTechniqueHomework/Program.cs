@@ -6,6 +6,7 @@ namespace DisignTechniqueHomework
     {
         static void Main(string[] args)
         {
+            /*
             string input = Console.ReadLine();
 
             Greedy greedy = new Greedy(input);
@@ -13,7 +14,12 @@ namespace DisignTechniqueHomework
             greedy.OperaterDivision();
             greedy.InsertParentheses();
             greedy.OutPut();
+            */
 
+            BackTraking backtraking = new BackTraking(3,3);
+
+            backtraking.Bae();
+            backtraking.Calculate();
         }
     }
 }
