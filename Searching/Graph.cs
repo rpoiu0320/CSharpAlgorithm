@@ -32,23 +32,23 @@ namespace Searching
 
         bool[,] matrixGraph1 = new bool[5, 5]
 		{//[0 ,0] [0, 1] [0, 2] [0, 3] [0, 4]
-			{ false, true, true, true, true},
-			{ true, false, true, false, true},
-			{ true, true, false, false, false},
-			{ true, false, false, false, true},
-			{ true, true, false, true, false}
+			{ false,  true,  true,  true,  true},
+			{  true, false,  true, false,  true},
+			{  true,  true, false, false, false},
+			{  true, false, false, false,  true},
+			{  true,  true, false,  true, false}
 		};
 
 		// <가중치 그래프>
-		// -1 혹은 무한으로 단절을 표현
+		// -1 혹은 무한(엄청 큰 값)으로 단절을 표현
 		const int INF = int.MaxValue;
 		int[,] matrixGraph2 = new int[5, 5]
 		{
-			{ 0, 132, 16, INF, INF },
+			{  0, 132, 16, INF, INF },
 			{ 12, 132, 16, INF, INF },
-			{ 0, 132, 16, INF, INF },
-			{ 0, 132, 16, INF, INF },
-			{ 0, 132, 16, INF, INF }
+			{  0, 132, 16, INF, INF },
+			{  0, 132, 16, INF, INF },
+			{  0, 132, 16, INF, INF }
 		};
 
 

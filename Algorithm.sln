@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignTechnique", "DesignTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting", "Sort\Sorting.csproj", "{95AF448C-8B49-4C7B-A0F5-4EB1437F9411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Searching.csproj", "{064DA4F1-BEB5-4F34-9A95-2BC2A58031CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Searching", "Searching\Searching.csproj", "{064DA4F1-BEB5-4F34-9A95-2BC2A58031CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortestPath", "ShortestPath\ShortestPath.csproj", "{FD62910E-00FF-473C-A219-EDDFA9043867}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{064DA4F1-BEB5-4F34-9A95-2BC2A58031CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{064DA4F1-BEB5-4F34-9A95-2BC2A58031CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{064DA4F1-BEB5-4F34-9A95-2BC2A58031CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD62910E-00FF-473C-A219-EDDFA9043867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD62910E-00FF-473C-A219-EDDFA9043867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD62910E-00FF-473C-A219-EDDFA9043867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD62910E-00FF-473C-A219-EDDFA9043867}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,6 +8,8 @@ namespace Searching
 {
     public class Searching
     {
+        // 선형 자료구조의 탐색
+
         // <순차 탐색>
         // 앞에서부터 순차적으로 탐색
         // 시간 복잡도는 O(n)
@@ -21,8 +23,9 @@ namespace Searching
             return -1;
         }
 
-        // <이진탐색>
+        // <이진 탐색>
         // 찾으려는 데이터와 중간점위치에 있는 데이터를 반복적으로 비교하여 데이터를 탐색
+        // 데이터가 많을수록 효율 극대화
         // 시간 복잡도는 O(log n)
         // BinarySerach는 사용 전 반드시 정렬을 하고 사용해야 함
         public static int BinarySearch<T>(in IList<T> list, in T item) where T : IComparable<T>
@@ -32,7 +35,9 @@ namespace Searching
 
             while(low <= high)
             {
-                // int middle = (low + high) >> 1;        컴퓨터의 연산은 나눗셈이 다른 연산에 비하여 비교적 느리고 비트 연산이 가장 빠름         
+                // int middle = (low + high) >> 1;        컴퓨터의 연산은 나눗셈이 다른 연산에 비하여 비교적 느리고 비트 연산이 가장 빠름,
+                //                                        따라서 나눌려는 수가 2, 2의 제곱들일 경우 비트 연산을 활용하면 효율적임
+                 
                 int middle = (int)((low + high) * 0.5f);    // 나누기 2
                 int compare = list[middle].CompareTo(item);
 
@@ -45,6 +50,8 @@ namespace Searching
             }
             return -1;
         }
+
+        // 비선형 자료구조의 탐색
 
         // 그래프 서치 알고리즘 DFS, BFS
 
