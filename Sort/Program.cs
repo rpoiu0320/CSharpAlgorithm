@@ -54,11 +54,14 @@ namespace _10._Sorting
         {
             for (int i = 0; i < list.Count; i++)
             {
+                int SwapCount = 0;
                 for (int j = 1; j < list.Count; j++)
                 {
                     if (list[j - 1] > list[j])
                         Swap(list, j - 1, j);
                 }
+                if (SwapCount == 0)
+                    break;
             }
         }
 
