@@ -62,7 +62,7 @@ namespace ShortestPathHomework
             int[,] graph = new int[8, 8]
             {
                 {   0,   8,   3,   2,   5, INF, INF, INF},
-                {   8,   0, INF, INF, INF, INF, INF,   9},
+                {   8,   0, INF, INF, INF, INF,   2, INF},
                 {   3, INF,   0, INF, INF, INF, INF, INF},
                 {   2, INF, INF,   0, INF, INF, INF,   9},
                 {   5, INF, INF, INF,   0, INF, INF,   3},
